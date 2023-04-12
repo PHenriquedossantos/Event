@@ -26,3 +26,7 @@ def cadastro(request):
         user = User.objects.create_user(username=username, email=email, password=senha)
         messages.add_message(request, constants.SUCCESS, 'Usuário salvo com sucesso!')
         return redirect(reverse('login'))
+    
+    def login(request):
+        if request.method == "GET":
+            return render(request, 'login.html')
