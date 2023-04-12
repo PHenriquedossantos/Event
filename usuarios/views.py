@@ -16,7 +16,10 @@ def cadastro(request):
         if not (senha == confirmar_senha):
             messages.add_message(request, constants.ERROR, 'As senhas devem ser iguais')
             return redirect(reverse('cadastro'))
-        # VALIDAR FORÇA DA SENHA
+
+        if len(senha) < 4:
+            messages.add_message(request, constants.ERROR, 'A senha deve ser maior ou igual a 4 digitos.')
+            return redirect(reverse('cadastro'))
         user = User.objects.filter(username=username)
 
         if user.exists():
@@ -27,6 +30,6 @@ def cadastro(request):
         messages.add_message(request, constants.SUCCESS, 'Usuário salvo com sucesso!')
         return redirect(reverse('login'))
     
-    def login(request):
-        if request.method == "GET":
-            return render(request, 'login.html')
+def login(request):
+    if request.method == "GET":
+        return render(request, 'login.html')
