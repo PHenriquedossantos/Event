@@ -45,4 +45,6 @@ def novo_evento(request):
 
 def gerenciar_evento(request):
     if request.method == "GET":
-        return render(request, 'gerenciar_evento.html')
+        eventos = Evento.objects.filter(criador=request.user)
+        return render(request, 'gerenciar_evento.html', {'eventos': eventos})
+    
