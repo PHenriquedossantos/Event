@@ -56,4 +56,5 @@ def gerenciar_evento(request):
 def inscrever_evento(request, id):
     evento = get_object_or_404(Evento, id=id)
     if request.method == "GET":
-        return render(request, 'inscrever_evento.html')
+        return render(request, 'inscrever_evento.html', {'evento': evento})
+ 
