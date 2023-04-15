@@ -7,7 +7,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+                <br>
                 <img width="100%" src="{{evento.logo.url}}">
                 <br>
                 <br>
