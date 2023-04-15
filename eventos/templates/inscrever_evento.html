@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-            
+
                 <img width="100%" src="{{evento.logo.url}}">
                 <br>
                 <br>
@@ -20,7 +20,10 @@
                 <br>
                 <p>{{evento.data_inicio}} a {{evento.data_termino}}</p>
 
-                <a style="text-decoration: none;" class="btn-principal" href="#">QUERO PARTICIPAR</a>
+                <form action="{% url 'inscrever_evento' %}" method="POST">
+                    <input  class="btn-principal" href="#" type="submit" value="QUERO PARTICIPAR">
+                </form>
+
             
             </div>
         </div>
