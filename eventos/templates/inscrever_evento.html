@@ -20,7 +20,7 @@
                 <br>
                 <p>{{evento.data_inicio}} a {{evento.data_termino}}</p>
 
-                <form action="{% url 'inscrever_evento' %}" method="POST">
+                <form action="{% url 'inscrever_evento' evento.id %}" method="POST">
                     <input  class="btn-principal" href="#" type="submit" value="QUERO PARTICIPAR">
                 </form>
 
