@@ -65,3 +65,8 @@ def inscrever_evento(request, id):
 
         return redirect (f'/eventos/inscrever_evento/{id}/')
  
+def participantes_evento(request, id):
+    evento = get_object_or_404(Evento, id=id)
+    if request.method == "GET":
+        participantes = evento.participantes.all()[::3]
+        return render(request, 'participantes_evento.html', {'evento': evento, 'participantes': participantes})
