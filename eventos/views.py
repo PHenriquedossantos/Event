@@ -47,7 +47,7 @@ def novo_evento(request):
         messages.add_message(request, constants.SUCCESS, 'Evento cadastrado com sucesso')
         return redirect(reverse('novo_evento'))
     
-
+@login_required
 def gerenciar_evento(request):
     if request.method == "GET":
         nome = request.GET.get('nome')
