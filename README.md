@@ -1,5 +1,5 @@
 <h1>Event Registration System</h1>
- +  This is a Django-based project for event registration. It allows users to sign up and login, create new events, participate in events, and retrieve participation certificates.
+<p>This is a Django-based project for event registration. It allows users to sign up and login, create new events, participate in events, and retrieve participation certificates.</p>
 
 Installation
 To run the project, first, clone the repository:
@@ -39,27 +39,27 @@ Endpoints
 Main App Endpoints
 The main app's endpoints are:
 
-/admin/: Django's admin site
-/usuarios/: Users app
-/eventos/: Events app
-/cliente/: Client app
++ /admin/: Django's admin site
++ /usuarios/: Users app
++ /eventos/: Events app
++ /cliente/: Client app
 Users App Endpoints
 The users app's endpoints are:
 
-/usuarios/cadastro/: User registration
-/usuarios/login/: User login
++ /usuarios/cadastro/: User registration
++ /usuarios/login/: User login
 Events App Endpoints
 The events app's endpoints are:
 
-/eventos/novo_evento/: Create a new event
-/eventos/gerenciar_evento/: Manage an event
-/eventos/inscrever_evento/<int:id>/: Register for an event
-/eventos/participantes_evento/<int:id>/: Get the list of participants for an event
-/eventos/gerar_csv/<int:id>/: Generate a CSV file for an event
-/eventos/certificados_evento/<int:id>/: Get the list of certificates for an event
-/eventos/gerar_certificado/<int:id>/: Generate a certificate for an event
-/eventos/procurar_certificado/<int:id>/: Search for a certificate for an event
++ /eventos/novo_evento/: Create a new event
++ /eventos/gerenciar_evento/: Manage an event
++ /eventos/inscrever_evento/<int:id>/: Register for an event
++ /eventos/participantes_evento/<int:id>/: Get the list of participants for an event
++ /eventos/gerar_csv/<int:id>/: Generate a CSV file for an event
++ /eventos/certificados_evento/<int:id>/: Get the list of certificates for an event
++ /eventos/gerar_certificado/<int:id>/: Generate a certificate for an event
++ /eventos/procurar_certificado/<int:id>/: Search for a certificate for an event
 Certificates App Endpoints
 The certificates app's endpoints are:
 
-/certificados/meus_certificados/: Get a list of the user's certificates.
++ /certificados/meus_certificados/: Get a list of the user's certificates.
