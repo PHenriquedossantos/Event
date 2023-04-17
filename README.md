@@ -1,5 +1,5 @@
 <h1>Event Registration System</h1>
-  This is a Django-based project for event registration. It allows users to sign up and login, create new events, participate in events, and retrieve participation certificates.
+ +  This is a Django-based project for event registration. It allows users to sign up and login, create new events, participate in events, and retrieve participation certificates.
 
 Installation
 To run the project, first, clone the repository:
